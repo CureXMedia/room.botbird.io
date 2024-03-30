@@ -7,14 +7,12 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-    RectangleStackIcon,
-    CommandLineIcon,
-    Squares2X2Icon,
     BookOpenIcon,
-    InformationCircleIcon
+    InformationCircleIcon,
+    PencilSquareIcon
   } from "@heroicons/react/24/solid";
   import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link , useLocation} from "react-router-dom";
+import { Link , useLocation ,useNavigate} from "react-router-dom";
 import logo from '../assests/Asset 1.png'
 
 function NavItem({ children, to}) {
@@ -42,12 +40,12 @@ const links= [
   {
     title: 'About us',
     icon: InformationCircleIcon,
-    to: '/about'
+    to: '/about-us'
   },
   {
-    title: 'Docs',
-    icon: CommandLineIcon,
-    to: '/coming-soon'
+    title: 'Blogs',
+    icon: PencilSquareIcon,
+    to: '/blogs'
   }
 ]
 export default function Nav() {
@@ -55,6 +53,7 @@ export default function Nav() {
     const handleOpen = () => setOpen((cur) => !cur);
     const [scrollPosition, setScrollPosition] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
     const handleScroll = () => {
         const position = window.scrollY;
         setScrollPosition(position>30);
@@ -94,7 +93,7 @@ export default function Nav() {
             })}
           </ul>
           <div className="hidden items-center gap-4 lg:flex">
-            <Button>Log in</Button>
+            <Button onClick={()=>{navigate('/coming-soon')}}>Log in</Button>
           </div>
           <IconButton
             variant="text"
@@ -122,8 +121,7 @@ export default function Nav() {
             })}
             </ul>
             <div className="mt-6 mb-4 flex items-center gap-4">
-              <Button variant="text">Log in</Button>
-              <Button color="gray">buy now</Button>
+              <Button variant="text" onClick={()=>{navigate('/coming-soon')}}>Log in</Button>
             </div>
           </div>
         </Collapse>

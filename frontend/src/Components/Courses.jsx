@@ -33,7 +33,7 @@ const courses = [
 
 export function CardWithLink({icon,title,description,link}) {
     return (
-    <Link to={link} className="inline-block">
+    <Link to={link} className="w-[20rem]">
         <Card className="mt-6 w-[20rem] ">
             <CardBody>
                 {icon}

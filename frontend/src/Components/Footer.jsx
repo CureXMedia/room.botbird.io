@@ -26,7 +26,7 @@ const COMPANY = [
   },
   {
     name: "Courses",
-    link: "/all-courses",
+    link: "/courses",
   },
 ];
 
