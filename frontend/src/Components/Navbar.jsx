@@ -14,6 +14,7 @@ import {
   import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link , useLocation ,useNavigate} from "react-router-dom";
 import logo from '../assests/Asset 1.png'
+import logo2 from '../../public/logo.png'
 
 function NavItem({ children, to}) {
   return (
@@ -78,8 +79,8 @@ export default function Nav() {
                 {/* <Typography color="blue-gray" className="text-lg font-bold">
                     Coding Room
                 </Typography> */}
-                <div className="bg-[#02182b] px-2 py-1 rounded-lg">
-                    <img src={logo} alt="Coding Room" className="h-6" />
+                <div className="px-2 py-1 rounded-lg">
+                    <img src={logo2} alt="Coding Room" className="h-12" />
                 </div>
             </Link>
           <ul className="ml-10 hidden items-center gap-6 lg:flex">

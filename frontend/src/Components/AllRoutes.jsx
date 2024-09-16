@@ -11,7 +11,7 @@ const Home = lazy(()=> import('./Home.jsx'))
 const Courses = lazy(()=> import('./Courses.jsx'))
 const BlogSection = lazy(()=> import('./BlogSection.jsx'))
 const NotFound = lazy(()=> import('./NotFound.jsx'))
-
+const LandingWeekend = lazy(()=> import('./LandingWeekend.jsx'))
 export default function AllRoutes() {
     return(
         <>
@@ -27,6 +27,7 @@ export default function AllRoutes() {
                     <Route path='/courses/mern-stack' element={<ComingSoon/>}/>
                     <Route path='/courses/dsa' element={<DSA/>}/>
                     <Route path='/coming-soon' element={<ComingSoon/>}/>
+                    <Route path='/landing/weekend' element={<LandingWeekend/>}/>
                     <Route path='*' element={<NotFound/>}/>
                 </Routes>
             </Suspense>
